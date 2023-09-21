@@ -39,10 +39,10 @@ Add notes and see context of note:
 ![Added Notes](Assets/AddNotes.png)
 
 Delete a note titles "Bootcamp":
-![Bootcamp note deleted](Assets/AfterDelete.png)
+![Delete note titled Bootcamp](Assets/DeleteBootcamp.png)
 
 Results:
-![Aftermath of deletion](Assets/DeleteBootcamp.png)
+![Aftermath of deletion](Assets/AfterDelete.png)
 
 
 
