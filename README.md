@@ -34,6 +34,19 @@ express: https://www.npmjs.com/package/express
 ## Walkthrough video (no talking)
 https://drive.google.com/file/d/1LSgg62b5q0r3YwCfSrE8LeKznxeXn2ak/view
 
+## ScreenShots of App:
+Add notes and see context of note: 
+![Added Notes](Assets/AddNotes.png)
+
+Delete a note titles "Bootcamp":
+![Bootcamp note deleted](Assets/AfterDelete.png)
+
+Results:
+![Aftermath of deletion](Assets/DeleteBootcamp.png)
+
+
+
+
 ## Start Program/ Tests:
 
 Back-end server details:
