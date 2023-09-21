@@ -64,6 +64,10 @@ app.delete('/api/notes/:id', (req,res) => {
 
     if(noteIndex !== -1) {
         apiNotes.splice(noteIndex, 1);
+
+        fs.writeFile('./Develop/db/db.json', JSON.stringify(apiNotes), (err) => {
+            
+        })
     }
     
 })
