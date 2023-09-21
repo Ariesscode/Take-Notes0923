@@ -38,6 +38,8 @@ https://drive.google.com/file/d/1LSgg62b5q0r3YwCfSrE8LeKznxeXn2ak/view
 Add notes and see context of note: 
 ![Added Notes](Assets/AddNotes.png)
 
+![Add note titled bootcamp](Assets/AddBootcamp.png)
+
 Delete a note titles "Bootcamp":
 ![Delete note titled Bootcamp](Assets/DeleteBootcamp.png)
 
