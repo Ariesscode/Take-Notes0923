@@ -56,7 +56,7 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
 
-    const noteIndex = apiNotes.findIndex(({note_id}) => note_id === noteId);
+    const noteIndex = apiNotes.findIndex(({id}) => id === noteId);
 
     if (noteIndex >= 0) {
         apiNotes.splice(noteIndex, 1);
