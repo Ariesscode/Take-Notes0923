@@ -16,9 +16,7 @@ app.get('/notes', (req, res) => {
     res.sendFile(`${__dirname}/Develop/public/notes.html`)
 });
 
-app.get('*', (req,res) => {
-    res.sendFile(`${__dirname}/Develop/public/index.html`)
-});
+
 
 app.get('/api/notes', (req,res) => {
     res.json(apiNotes);
@@ -53,6 +51,9 @@ app.post('/api/notes', (req,res) => {
     
 });
 
+app.get('*', (req,res) => {
+    res.sendFile(`${__dirname}/Develop/public/index.html`)
+});
 
 app.listen(PORT, () => {
     console.log(`App is listening on http://localhost:${PORT}.`)
