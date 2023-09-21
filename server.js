@@ -3,7 +3,7 @@ const app = express();
 const apiNotes = require('./Develop/db/db.json');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-const uuid = uuidv4();
+
 
 const PORT = process.env.PORT || 4007;
 
@@ -34,7 +34,7 @@ app.post('/api/notes', (req, res) => {
         const newNote = {
             title,
             text,
-            id: uuid,
+            id: uuidv4(), 
         };
         apiNotes.push(newNote);
         fs.writeFile('./Develop/db/db.json', JSON.stringify(apiNotes), (err) =>
