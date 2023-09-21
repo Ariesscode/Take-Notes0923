@@ -31,6 +31,9 @@ Mac users: https://www.postman.com/downloads/canary/
 UUID : https://www.npmjs.com/package/uuid <br>
 express: https://www.npmjs.com/package/express
 
+## Walkthrough video (no talking)
+https://drive.google.com/file/d/1LSgg62b5q0r3YwCfSrE8LeKznxeXn2ak/view
+
 ## Start Program/ Tests:
 
 Back-end server details:
