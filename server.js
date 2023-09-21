@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const termData = require('./Develop/db/db.json');
+const apiNotes = require('./Develop/db/db.json');
 const PORT = process.env.PORT || 4007;
 
 app.use(express.json());
@@ -14,7 +14,11 @@ app.get('/notes', (req, res) => {
 
 app.get('*', (req,res) => {
     res.sendFile(`${__dirname}/Develop/public/index.html`)
-})
+});
+
+app.get('/api/notes', (req,res) => {
+    res.json(apiNotes);
+});
 
 app.listen(PORT, () => {
     console.log(`App is listening on http://localhost:${PORT}.`)
