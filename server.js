@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const apiNotes = require('./Develop/db/db.json');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 const PORT = process.env.PORT || 4007;
 
 app.use(express.json());
@@ -19,6 +21,23 @@ app.get('*', (req,res) => {
 app.get('/api/notes', (req,res) => {
     res.json(apiNotes);
 });
+
+app.post('/api/notes', (req,res) => {
+    const { title, text } = req.body;
+
+    console.info(`${req.method} request received to add a new note.`);
+
+    if (title && text) {
+
+    const newNote = {
+        title,
+        text,
+        note_id: uuidv4(),
+    };
+    const noteString = JSON.stringify(newNote);
+    }
+});
+
 
 app.listen(PORT, () => {
     console.log(`App is listening on http://localhost:${PORT}.`)
