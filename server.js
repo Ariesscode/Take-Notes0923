@@ -35,6 +35,9 @@ app.post('/api/notes', (req,res) => {
         note_id: uuidv4(),
     };
     const noteString = JSON.stringify(newNote);
+
+    fs.appendFile(apiNotes, newNote, (err) =>
+    err ? console.error(err) : console.log(`New ${newNote.text} has been saved to db.json file.`))
     }
 });
 
