@@ -3,6 +3,8 @@ const app = express();
 const apiNotes = require('./Develop/db/db.json');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+const uuid = uuidv4();
+
 const PORT = process.env.PORT || 4007;
 
 app.use(express.json());
@@ -32,13 +34,23 @@ app.post('/api/notes', (req,res) => {
     const newNote = {
         title,
         text,
-        note_id: uuidv4(),
+        note_id: uuid,
     };
-    const noteString = JSON.stringify(newNote);
+    apiNotes.push(newNote);
+    fs.writeFile('./Develop/db/db.json', JSON.stringify(apiNotes), (err) =>
+    err ? console.error(err) : console.log(`${newNote.text}. New note has been saved to db.json file.`));
 
-    fs.appendFile(apiNotes, newNote, (err) =>
-    err ? console.error(err) : console.log(`New ${newNote.text} has been saved to db.json file.`))
+    const response = {
+        status: 'Success!',
+        body: newNote
+    };
+    console.log(response);
+    res.status(201).json(response);
+    } else {
+        res.status(500).json('Post error!')
     }
+
+    
 });
 
 
