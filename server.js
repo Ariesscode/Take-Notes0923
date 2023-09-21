@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4007;
 app.use(express.json());
 app.use(express.urlencoded ({extended: true}));
 
-app.use(express.static('public'));
+app.use(express.static('Develop/public'));
 
 app.get('/notes', (req, res) => {
     res.sendFile(`${__dirname}/Develop/public/notes.html`)
