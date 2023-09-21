@@ -9,7 +9,11 @@ app.use(express.urlencoded ({extended: true}));
 app.use(express.static('public'));
 
 app.get('/notes', (req, res) => {
-    res.sendFile(`${__dirname}/notes.html`)
+    res.sendFile(`${__dirname}/Develop/public/notes.html`)
+});
+
+app.get('*', (req,res) => {
+    res.sendFile(`${__dirname}/Develop/public/index.html`)
 })
 
 app.listen(PORT, () => {
