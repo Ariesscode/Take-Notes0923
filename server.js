@@ -69,9 +69,16 @@ app.delete('/api/notes/:id', (req,res) => {
             if (err) {
                 console.error(err);
                 res.status(500).json('Error deleting the note.');
+            } else {
+                console.log(`Note with ID ${noteId} has been deleted.`);
+                res.status(200).json({ message: 'Note deleted successfully!'});
             }
-        })
+            
+        });
+    } else {
+        res.status(404).json('Note not found');
     }
+    });
     
 })
 
