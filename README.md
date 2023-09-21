@@ -39,20 +39,20 @@ Back-end server details:
 3. download all dependencies (npm i express / npm i uuid)
 4. start program: npm start
 5. If your using Posting: 
--Enter method : POST
--Body(raw) : {
-  "title": "your note title",
+-Enter method : POST <br>
+-Body(raw) : {<br>
+  "title": "your note title",<br>
   "text":"your text"
 }
 -SEND POST
 -You will notice the POST was created, a unique identifier is added to the JSON array as a value to the id property created,then this new instance is sent back to the server, where it is then added the the "db.json" file and on the app, check out your new note! 
-6. You can test the app also by just using the app (make sure to install npm and all dependencies!)
--Click "Get started"
--Type the title of your note and the context 
--Click the save icon 
--Look to your left, you will see your note has been added
--The server sneds you feedback of success when your note has been added successfully! If any errors
-occured, it would print a status code and let you know of the error. This error is communicated to both the server and the client!
+6. You can test the app also by just using the app (make sure to install npm and all dependencies!)<br>
+-Click "Get started"<br>
+-Type the title of your note and the context <br>
+-Click the save icon <br>
+-Look to your left, you will see your note has been added<br>
+-The server sneds you feedback of success when your note has been added successfully! If any errors<br>
+occured, it would print a status code and let you know of the error. This error is communicated to both the server and the client! <br>
 **Try deleting a note on the browser and look back at the db.json file, you will notice how quick the note was removed from the db.json file and the client side is updated of deletion.
 
 
