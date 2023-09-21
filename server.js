@@ -61,7 +61,7 @@ app.delete('/api/notes/:id', (req, res) => { //route configured to enter input o
     if (noteIndex >= 0) {
         apiNotes.splice(noteIndex, 1); //it will delete the index  if indexnumber of array is equal to or greater than 0
 
-        fs.writeFile('./Develop/db/db.json', JSON.stringify(apiNotes), (err) => {
+        fs.writeFile('./Develop/db/db.json', JSON.stringify(apiNotes), (err) => {  //write to db.json file with string version
             if (err) {
                 console.error(err);
                 res.status(500).json('Error deleting the note.');
