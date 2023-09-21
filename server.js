@@ -66,7 +66,10 @@ app.delete('/api/notes/:id', (req,res) => {
         apiNotes.splice(noteIndex, 1);
 
         fs.writeFile('./Develop/db/db.json', JSON.stringify(apiNotes), (err) => {
-            
+            if (err) {
+                console.error(err);
+                res.status(500).json('Error deleting the note.');
+            }
         })
     }
     
