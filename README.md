@@ -43,7 +43,7 @@ Back-end server details:
 -Body(raw) : {<br>
   "title": "your note title",<br>
   "text":"your text"
-}
+} <br>
 -SEND POST <br>
 -You will notice the POST was created, a unique identifier is added to the JSON array as a value to the id property created,then this new instance is sent back to the server, where it is then added the the "db.json" file and on the app, check out your new note! 
 6. You can test the app also by just using the app (make sure to install npm and all dependencies!)<br>
