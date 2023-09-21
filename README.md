@@ -3,6 +3,10 @@
 ## Github Repo 
 https://github.com/Ariesscode/Take-Notes0923
 
+## Heroku Deployed App
+https://takenotes0923-7072b42b7aee.herokuapp.com/
+
+
 ## Table of contents:
 
 - [Github Repo](#github-repo)
