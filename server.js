@@ -7,20 +7,22 @@ const uuid = uuidv4();
 
 const PORT = process.env.PORT || 4007;
 
-app.use(express.json());
-app.use(express.urlencoded ({extended: true}));
+
 
 app.use(express.static('Develop/public'));
+
+app.use(express.json());
+app.use(express.urlencoded ({extended: true}));
 
 app.get('/notes', (req, res) => {
     res.sendFile(`${__dirname}/Develop/public/notes.html`)
 });
 
-
-
 app.get('/api/notes', (req,res) => {
     res.json(apiNotes);
 });
+
+
 
 app.post('/api/notes', (req,res) => {
     const { title, text } = req.body;
@@ -54,6 +56,17 @@ app.post('/api/notes', (req,res) => {
 app.get('*', (req,res) => {
     res.sendFile(`${__dirname}/Develop/public/index.html`)
 });
+
+app.delete('/api/notes/:id', (req,res) => {
+    const noteId = req.params.note_id;
+
+    const noteIndex = apiNotes.findIndex((note) => note.note_id === noteId);
+
+    if(noteIndex !== -1) {
+        apiNotes.splice(noteIndex, 1);
+    }
+    
+})
 
 app.listen(PORT, () => {
     console.log(`App is listening on http://localhost:${PORT}.`)
