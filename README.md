@@ -24,11 +24,11 @@ This project was focused on buiding the back-end of this Note taker application.
 ## Resources
 
 Postman
-window users: https://www.postman.com/downloads/
+window users: https://www.postman.com/downloads/ <br>
 Mac users: https://www.postman.com/downloads/canary/
 
 ## Dependencies:
-UUID : https://www.npmjs.com/package/uuid
+UUID : https://www.npmjs.com/package/uuid <br>
 express: https://www.npmjs.com/package/express
 
 ## Start Program/ Tests:
@@ -38,13 +38,13 @@ Back-end server details:
 2. npm install
 3. download all dependencies (npm i express / npm i uuid)
 4. start program: npm start
-5. If your using Posting: 
+5. If your using Posting: <br>
 -Enter method : POST <br>
 -Body(raw) : {<br>
   "title": "your note title",<br>
   "text":"your text"
 }
--SEND POST
+-SEND POST <br>
 -You will notice the POST was created, a unique identifier is added to the JSON array as a value to the id property created,then this new instance is sent back to the server, where it is then added the the "db.json" file and on the app, check out your new note! 
 6. You can test the app also by just using the app (make sure to install npm and all dependencies!)<br>
 -Click "Get started"<br>
